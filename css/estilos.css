@@ -1,0 +1,226 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color: black;
+}
+.contenedor{
+	background-color: orange;
+	width: 90%;
+	padding: 20px;
+	max-width: 1000px;
+	margin: auto;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(4, 1fr);
+	
+}
+
+.cabecera{
+	background-color: red;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column: span 4;
+}
+.logo{
+	background-color: #00FF00;
+	grid-column: span 1;
+}
+.logo img{
+	height: 100%;
+	width: 100%;
+}
+.banner{
+	background-color: skyblue;
+	grid-column: span 3;
+}
+.banner img{
+	height: 100%;
+	width: 100%;
+}
+.video{
+	grid-column:span 4 ;
+}
+.banner video{
+	width: 100%;
+}
+.menu{
+	background-color: #FF6F00;
+	grid-column: span 4;
+	display: flex;
+	text-align: center;
+	align-items: center;
+
+}
+
+.menulista{
+	list-style: none;
+	padding: 0px;
+	display: flex;
+	gap: 30px;
+}
+.menulink{
+	text-decoration: none;
+	color:#FFF;
+	font-size: 20px;
+	border: 1px solid;
+	background-color: red;
+	padding: 10px 60px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #000;
+	display: block;
+	margin: 10px;
+}
+
+.menulista a:hover{
+background-color: #F54927;
+font-weight: bolder;
+transition-duration: 1s;
+}
+
+.lateral{
+    background-color: #FFD600;
+    grid-row: span 2;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.principal{
+	background-color: #FFF;
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.seccion1{
+	background-color: purple;
+	
+	grid-row: span 2;
+}
+.seccion1 img{
+	height: 100%;
+	width: 100%;
+}
+
+.minis{
+	background-color: #F4320B;
+	grid-column: span 1;
+	text-align: center;
+	padding: 10px;
+}
+.miniimagen img{
+	height: 100%;
+	width: 100%;
+	border-radius: 25px;
+}
+.miniimagen{
+	grid-column: span 1;
+}
+
+.pie{
+	background-color: black;
+	grid-column: span 3;
+	text-align: center;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+
+}
+.hamburguesa{
+	display: none;
+	cursor: pointer;
+}
+
+.barra{
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	background-color: #ecf0f1;
+}
+
+
+
+@media (max-width: 768px){
+
+.contenedor{
+	grid-template-columns:repeat(4, 1fr);
+	width: 98%;
+	padding: 5px;
+}
+
+.cabecera{
+	grid-template-columns:repeat(4, 1fr);
+}
+.logo{
+	grid-column:span 4;
+	text-align: center;
+}
+.banner{
+	grid-column: span 4;
+}
+.principal{
+grid-column: span 4;
+}
+.lateral{
+	grid-column: span 4;
+}
+.minis{
+	grid-column: span 2;
+	display: none;
+}
+.miniimagen{
+	grid-column: span 2;
+	display: none;
+}
+.pie{
+	grid-template-columns: repeat(4, 1fr);
+}
+.pie div{
+	grid-column: span 4;
+}
+.menu{
+	display: flex;
+	flex-direction: column;
+	background-color: red;
+	text-align: center;
+.hamburguesa{
+	display: block;
+	cursor: pointer;
+}
+
+.hamburguesa .barra{
+	display: block;
+	width: 25px;
+	margin: 5px auto;
+	background-color: white;
+	transition: 0.3s;
+}
+.hamburguesa.active .barra:nth-child(1){
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburguesa.active .barra:nth-child(2){
+	opacity: 0;
+}
+.hamburguesa.active .barra:nth-child(3){
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+.menulista{
+	display: none;
+	position: adsolute;
+	top: 70px;
+	left: -100%;
+	flex-direction: column;
+	background-color: red;
+	transition: 0.25;
+	padding: 20px 0;
+}
+.menulista.active{
+	display: block;
+left:0;
+}
+.menulista li{
+
+
+	margin:15px 0;
+}
+
